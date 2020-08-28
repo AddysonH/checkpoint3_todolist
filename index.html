@@ -13,16 +13,48 @@
 </head>
 
 <body>
-    <header></header>
-    <main>
-        <h1>Hello checkpoint3_todolist</h1>
+    <header class="fluid-container bg-primary">
+        <p>Ta-Do</p>
+    </header>
 
+
+
+    <main class="container">
+
+        <form class="row" onsubmit="app.ListsController.createList()">
+            <div class="col-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="title" id="title" placeholder="New List">
+                </div>
+            </div>
+            <button type="submit">Let's Go!</button>
+        </form>
+
+        <div id="lists" class="col-12">
+
+            <h1>The title of the List</h1>
+
+        </div>
     </main>
-    <footer></footer>
+
+
+
+    <footer class="fluid-container bg-primary">
+        <p class="col-12">footer</p>
+    </footer>
 
 
 
     <script src="app/main.js" type="module"></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'
+        integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN'
+        crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'
+        integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q'
+        crossorigin='anonymous'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'
+        integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl'
+        crossorigin='anonymous'></script>
 </body>
 
 </html>

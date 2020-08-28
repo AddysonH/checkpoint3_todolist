@@ -1,10 +1,13 @@
 import Value from "./Models/Value.js";
+import List from "./Models/List.js"
+
 
 let _state = {
-  activeValue: new Value({ title: "Value" }),
-  /** @type {Value[]} */
-  values: []
-};
+  lists: [
+    new List({ title: "New List" }),
+  ]
+}
+
 
 class Store {
   /**
