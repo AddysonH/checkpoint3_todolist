@@ -5,7 +5,6 @@ class ListsService {
     createList(newList) {
         let list = new List(newList)
         STORE.State.lists.push(list)
-
     }
 }
 

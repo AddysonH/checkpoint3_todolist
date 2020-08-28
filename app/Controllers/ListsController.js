@@ -17,8 +17,9 @@ export default class listController {
         _drawList();
     }
 
-    createList() {
+    createList(event) {
         event.preventDefault()
+        debugger
         let form = event.target
         let newList = {
             title: form.title.value

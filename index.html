@@ -20,21 +20,30 @@
 
 
     <main class="container">
-
-        <form class="row" onsubmit="app.ListsController.createList()">
-            <div class="col-12">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="title" id="title" placeholder="New List">
+        <div>
+            <form class="row" onsubmit="app.listsController.createList(event)">
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="title" id="title" placeholder="List Title">
+                    </div>
                 </div>
-            </div>
-            <button type="submit">Let's Go!</button>
-        </form>
-
-        <div id="lists" class="col-12">
-
-            <h1>The title of the List</h1>
-
+                <button type="submit">Let's Go!</button>
+            </form>
         </div>
+
+        <div class="row">
+            <div id="lists" class="col-12">
+
+
+                <div class="col-12" id="items">
+
+                </div>
+
+
+
+            </div>
+        </div>
+
     </main>
 
 
