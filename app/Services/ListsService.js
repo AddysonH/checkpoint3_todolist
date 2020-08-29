@@ -6,6 +6,11 @@ class ListsService {
         let list = new List(newList)
         STORE.State.lists.push(list)
     }
+
+    addItem(newItem, listId) {
+        let list = STORE.State.lists.find(l => l.id == listId)
+        list.items.push(newItem)
+    }
 }
 
 const SERVICE = new ListsService();

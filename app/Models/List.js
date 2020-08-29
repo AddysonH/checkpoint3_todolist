@@ -3,14 +3,38 @@ export default class List {
     constructor({ id, title }) {
         this.id = id || generateId();
         this.title = title
+        this.items = ["thing1", "thing2"]
     }
 
     get Template() {
-        console.log("Template here")
-        return `<div class="col-3 card m-2">
-        <h3 col-12>${this.title}</h3>
-        <input type="text" class="form-control m-2" name="list-items" id="list-items" placeholder="New Task">
+        return `
+        <div class="col-3 card card-deck m-2">
+           <i class="fa fa-trash" aria-hidden="true"></i>
+
+           <h3 col-12 class=>${this.title} </h3>           
+           <section row>
+
+              <div class="col-12">
+              
+                 ${this.thingToDoTemplate}
+              </div>
+
+           </section>
+      
+           <form onsubmit="app.listsController.addItem(event, '${this.id}')">
+               <input type="text" class="form-control m-2" name="listItem" id="listItem" placeholder="New Task">
+               <button type="submit">Add</button>
+           </form>
+
     </div>`
+    }
+
+    get thingToDoTemplate() {
+        let template = " "
+        this.items.forEach(i => {
+            template += `<li>${i}</li>`
+        });
+        return template
     }
 }
 

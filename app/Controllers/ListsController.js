@@ -19,13 +19,21 @@ export default class listController {
 
     createList(event) {
         event.preventDefault()
-        debugger
         let form = event.target
         let newList = {
             title: form.title.value
         }
         console.log("Drawing List")
         listsService.createList(newList)
+        _drawList();
+    }
+
+    addItem(event, listid) {
+        event.preventDefault
+        let form = event.target
+        let newItem = form.listItem.value
+        listsService.addItem(newItem, listid)
+        console.log("Working")
         _drawList();
     }
 }
