@@ -25,7 +25,12 @@ export default class listController {
         }
         console.log("Drawing List")
         listsService.createList(newList)
-        _drawList();
+        _drawList()
+    }
+
+    deleteList(id) {
+        listsService.removeList(id)
+        _drawList()
     }
 
     addItem(event, listid) {
@@ -34,6 +39,11 @@ export default class listController {
         let newItem = form.listItem.value
         listsService.addItem(newItem, listid)
         console.log("Working")
+        _drawList()
+    }
+
+    deleteItem(id, itemName) {
+        listsService.removeItem(id, itemName)
         _drawList();
     }
 }

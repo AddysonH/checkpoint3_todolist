@@ -13,35 +13,37 @@
 </head>
 
 <body>
-    <header class="fluid-container bg-primary">
-        <p>Ta-Do</p>
+    <header class="fluid-container bg-primary text-center">
+        <h1>Task Master</h1>
     </header>
 
 
 
     <main class="container">
-        <div>
-            <form class="row" onsubmit="app.listsController.createList(event)">
-                <div class="col-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="title" id="title" placeholder="List Title">
-                    </div>
-                </div>
-                <button type="submit">Let's Go!</button>
+
+        <div class="row">
+
+            <form class="col-6 m-3 d-flex align-self-end" onsubmit="app.listsController.createList(event)">
+
+                <input type="text" class="form-control" name="title" id="title" placeholder="List Title">
+                <button class="" type="submit">Add List</button>
+
             </form>
+
         </div>
 
 
-        <div class="row">
-            <div id="lists" class="col-12">
 
-                <div class="col-12 d-flex flex-direction-" id="items">
+        <div class="row" id="lists">
 
-                </div>
-
-            </div>
+        </div>
 
     </main>
+
+
+
+
+
 
 
 
