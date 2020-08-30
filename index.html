@@ -23,12 +23,16 @@
 
         <div class="row">
 
-            <form class="col-6 m-3 d-flex align-self-end" onsubmit="app.listsController.createList(event)">
+            <div class="col-6 m-auto">
 
-                <input type="text" class="form-control" name="title" id="title" placeholder="List Title">
-                <button class="" type="submit">Add List</button>
+                <form class="m-3 d-flex align-self-end" onsubmit="app.listsController.createList(event)">
 
-            </form>
+                    <input type="text" class="form-control mr-3" name="title" id="title" placeholder="List Title">
+                    <button class="" type="submit">Add List</button>
+
+                </form>
+
+            </div>
 
         </div>
 

@@ -9,22 +9,21 @@ export default class List {
     get Template() {
         return `
         
-            <div class="col-3 card m-3">
+            <div class="col-3 card m-auto">
             
                 <div class="row text-center bg-primary">
                    <div class="col-12 d-flex align-self-end">
-                      <h3 class="text-center mr-auto">${this.title}</h3>
-                      <button class="" onclick="app.listsController.deleteList('${this.id}')">del</button>
+                      <h3 class="mr-auto">${this.title}</h3>
+                      <button class="m-3" onclick="app.listsController.deleteList('${this.id}')">del</button>
                    </div>
                 </div>
                 
+                
                 ${this.thingToDoTemplate}
-
-                <form onsubmit="app.listsController.addItem(event, '${this.id}')">
+                <form class="m-3 d-flex align-self-end" onsubmit="app.listsController.addItem(event, '${this.id}')">
                    <input type="text" class="form-control" name="listItem" id="listItem" placeholder="New Task">
                    <button type="submit">Add</button>
                 </form>
-                        
             </div>
     `
     }
@@ -35,10 +34,12 @@ export default class List {
             template += `
           
                <div class="row m-3">
-                  <div class="col-12 d-flex align-self-end">
-                     <li class="mr-auto">${i}</li>
-                     <button class="d-flex flex-column" onclick="app.listsController.deleteItem('${this.id}','${i}')">Del</button>
-                  </div>
+                    <div class="col-12">
+                       <ul class="list-unstyled d-flex align-self-end">
+                           <li class="mr-auto"><input class="mr-3" type="checkbox">${i}</li>
+                           <button class="d-flex flex-column" onclick="app.listsController.deleteItem('${this.id}','${i}')">Del</button>
+                       </ul>
+                    </div>
                </div>
             `
 

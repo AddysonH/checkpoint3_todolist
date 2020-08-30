@@ -28,8 +28,8 @@ export default class listController {
         _drawList()
     }
 
-    deleteList(id) {
-        listsService.removeList(id)
+    deleteList(listId) {
+        listsService.removeList(listId)
         _drawList()
     }
 
