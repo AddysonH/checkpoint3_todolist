@@ -2,14 +2,13 @@ import List from "../Models/List.js"
 import STORE from "../store.js"
 
 class ListsService {
-    createList(newList) {
-        let list = new List(newList)
+    createList(listData) {
+        let list = new List(listData)
         STORE.State.lists.push(list)
     }
 
-    removeList(listId) {
-        let list = STORE.State.lists.findIndex(l => l.id == listId)
-        STORE.State.lists.splice(list);
+    removeList(id) {
+        STORE.State.lists = STORE.State.lists.filter(l => l.id != id)
     }
 
     addItem(newItem, listId) {

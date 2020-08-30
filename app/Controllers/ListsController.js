@@ -28,9 +28,10 @@ export default class listController {
         _drawList()
     }
 
-    deleteList(listId) {
-        listsService.removeList(listId)
+    deleteList(id) {
+        listsService.removeList(id)
         _drawList()
+
     }
 
     addItem(event, listid) {
@@ -45,5 +46,6 @@ export default class listController {
     deleteItem(id, itemName) {
         listsService.removeItem(id, itemName)
         _drawList();
+
     }
 }

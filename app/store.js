@@ -2,9 +2,7 @@ import List from "./Models/List.js"
 
 
 let _state = {
-  lists: [
-    new List({ title: "New List" })
-  ]
+  lists: [new List({ title: "New List" })]
 };
 
 //NOTE You should not need to change the code from this point down
