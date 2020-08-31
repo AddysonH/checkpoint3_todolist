@@ -17,19 +17,15 @@ export default class List {
                       <h3 class="mr-auto">${this.title}</h3>
 
                       <i onclick="app.listsController.deleteList('${this.id}')" class="d-flex flex-column m-auto fa fa-trash" aria-hidden="true"></i>
-
-
                    </div>
 
-                </div>
+                 </div>
                 
-                ${this.thingToDoTemplate}
-
-                <form class="m-3 d-flex align-self-end" onsubmit="app.listsController.addItem(event, '${this.id}')">
-                   <input type="text" class="form-control" name="listItem" id="listItem" placeholder="New Task">
-                   
-                   <button type="submit">Add</button>
-                </form>
+                      ${this.thingToDoTemplate}
+                       <form class="m-3 d-flex align-self-end" onsubmit="app.listsController.addItem(event, '${this.id}')">
+                         <input type="text" class="form-control" name="listItem" id="listItem" placeholder="New Task">
+                         <button><i type="submit" class="fa fa-plus" aria-hidden="true"></i></button>
+                       </form>
             </div>
     `
     }

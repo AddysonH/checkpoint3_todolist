@@ -16,3 +16,7 @@ ul.li {
 .banner{
     background: url('butterflyWall.jpg') no-repeat center center fixed;
 }
+
+.card {
+    height: 100%;
+}
