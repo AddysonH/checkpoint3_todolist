@@ -3,6 +3,7 @@ import STORE from "../store.js"
 
 //private
 function _drawList() {
+    STORE.saveState();
     let lists = STORE.State.lists
     let template = ''
     lists.forEach(list => template += list.Template)
