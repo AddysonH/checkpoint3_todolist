@@ -12,3 +12,7 @@ main{
 ul.li {
     list-style-type:none;
 }
+
+.banner{
+    background: url('butterflyWall.jpg') no-repeat center center fixed;
+}

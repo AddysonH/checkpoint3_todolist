@@ -15,7 +15,10 @@ export default class List {
 
                    <div class="col-12 d-flex align-self-end">
                       <h3 class="mr-auto">${this.title}</h3>
-                      <button class="m-3" onclick="app.listsController.deleteList('${this.id}')">del</button>
+
+                      <i onclick="app.listsController.deleteList('${this.id}')" class="d-flex flex-column m-auto fa fa-trash" aria-hidden="true"></i>
+
+
                    </div>
 
                 </div>
@@ -40,7 +43,9 @@ export default class List {
                     <div class="col-12">
                        <ul class="list-unstyled d-flex align-self-end">
                            <li class="mr-auto"><input class="mr-3" type="checkbox">${i}</li>
-                           <button class="d-flex flex-column" onclick="app.listsController.deleteItem('${this.id}','${i}')">Del</button>
+
+                           <i class="fa fa-trash class="d-flex flex-column" aria-hidden="true" onclick="app.listsController.deleteItem('${this.id}','${i}')"></i>
+
                        </ul>
                     </div>
                </div>
